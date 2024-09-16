@@ -52,7 +52,7 @@ local function createSocketFrame(slotID, name, parent, side, xOffset)
     local frame = CreateFrame("Frame", name .. "Frame", parent);
     frame:SetWidth(parent:GetWidth()*0.4);
     frame:SetHeight(parent:GetHeight()*0.4);
-    frame:SetPoint("TOP" .. side, parent, "TOP" .. direction(side), 10 * sign(side) + parent:GetWidth()*0.4* xOffset, - parent:GetHeight() * 0.05);
+    frame:SetPoint("TOP" .. side, parent, "TOP" .. direction(side), 10 * sign(side) + parent:GetWidth()*0.4*sign(side)* xOffset, - parent:GetHeight() * 0.05);
     frame.texture = frame:CreateTexture(name .. "Texture");
     frame.texture:SetAllPoints();
     return frame;
@@ -86,8 +86,10 @@ function slots:update(slotID)
 
     Crystal.enchants:updateEnchant(slotID);
     if not C_Item.DoesItemExist(slots.info[slotID].location) then
-        --Crystal.sockets:setIcon(slotID, nil, nil, slots.info.socketFrame);
-        --Crystal.sockets:setIcon(slotID, nil, nil, slots.info.secondSocketFrame);
+        Crystal.sockets:setIcon(slotID, nil, nil, slots.info[slotID].socketFrame);
+        if slots.info[slotID].secondGem then
+            Crystal.sockets:setIcon(slotID, nil, nil, slots.info[slotID].secondSocketFrame);
+        end
         return;
     end
     local item = Item:CreateFromItemLocation(slots.info[slotID].location);

@@ -65,7 +65,16 @@ function enchants:getEnchantLine(slotID)
         end
     end
     if Crystal.slots.info[slotID].enchantment then
-        return "Enchantable"
+        if slotID ~= 17 then
+            return "Enchantable"
+        elseif slotID == 17 then
+            for _, line in ipairs(ttData.lines) do
+                local isWeapon = strmatch(line.leftText, enchants.isWeapon)
+                if isWeapon then
+                    return "Enchantable"
+                end
+            end
+        end
     end
     return "";
 end
@@ -88,4 +97,5 @@ end
 
 function enchants:init()
     enchants.tooltipFilter = ENCHANTED_TOOLTIP_LINE:gsub('%%s', '(.+)');
+    enchants.isWeapon = DAMAGE_TEMPLATE:gsub('%%s', '(.+)');
 end

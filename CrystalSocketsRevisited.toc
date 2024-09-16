@@ -19,7 +19,7 @@
 ## Interface: 110002
 ## Title: Crystal Sockets Revisited
 ## Author: Dankostr
-## Version: 1.12
+## Version: 1.13
 ## Notes: Showing sockets and enchantments on equipped gear.
 ## SavedVariables: 
 

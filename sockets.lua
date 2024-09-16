@@ -19,7 +19,6 @@ local sockets = Crystal.sockets;
 
 function sockets:isEmpty(itemLink)
     local stats = C_Item.GetItemStats(itemLink);
-    if DLAPI then DLAPI.DebugLog("crystalSockets", stats) end
     if stats ~= nil then
         for key, val in pairs(stats) do
             if (string.find(key, "EMPTY_SOCKET_")) then
