@@ -58,7 +58,9 @@ function sockets:updateSocket(itemLink, slotID)
     sockets:showSocketIcon(itemLink, gemLink, slotID, Crystal.slots.info[slotID].socketFrame)
     if Crystal.slots.info[slotID].secondGem then
         local _, secondGemLink = GetItemGem(itemLink, 2)
-        sockets:showSocketIcon(itemLink, secondGemLink, slotID, Crystal.slots.info[slotID].secondSocketFrame)
+        if secondGemLink ~= nil then
+            sockets:showSocketIcon(itemLink, secondGemLink, slotID, Crystal.slots.info[slotID].secondSocketFrame)
+        end
     end
 end
 

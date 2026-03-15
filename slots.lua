@@ -18,9 +18,9 @@ local Crystal = CrystalSocketsAddon;
 local slots = Crystal.slots;
 
 slots.info = {
-    [1] = { ["name"] = "Head",           ["side"] = "LEFT",          ["enchantment"] = false , ["secondGem"] = false},
+    [1] = { ["name"] = "Head",           ["side"] = "LEFT",          ["enchantment"] = true , ["secondGem"] = false},
     [2] = { ["name"] = "Neck",           ["side"] = "LEFT",          ["enchantment"] = false,  ["secondGem"] = true },
-    [3] = { ["name"] = "Shoulder",       ["side"] = "LEFT",          ["enchantment"] = false,  ["secondGem"] = false },
+    [3] = { ["name"] = "Shoulder",       ["side"] = "LEFT",          ["enchantment"] = true,  ["secondGem"] = false },
     [4] = { ["name"] = "Shirt",          ["side"] = "LEFT",          ["enchantment"] = false,  ["secondGem"] = false },
     [5] = { ["name"] = "Chest",          ["side"] = "LEFT",          ["enchantment"] = true,   ["secondGem"] = false },
     [6] = { ["name"] = "Waist",          ["side"] = "RIGHT",         ["enchantment"] = false,  ["secondGem"] = false },
@@ -32,7 +32,7 @@ slots.info = {
     [12] = { ["name"] = "Finger1",       ["side"] = "RIGHT",         ["enchantment"] = true,   ["secondGem"] = true },
     [13] = { ["name"] = "Trinket0",      ["side"] = "RIGHT",         ["enchantment"] = false,  ["secondGem"] = true },
     [14] = { ["name"] = "Trinket1",      ["side"] = "RIGHT",         ["enchantment"] = false,  ["secondGem"] = true },
-    [15] = { ["name"] = "Back",          ["side"] = "LEFT",          ["enchantment"] = true,   ["secondGem"] = false },
+    [15] = { ["name"] = "Back",          ["side"] = "LEFT",          ["enchantment"] = false,   ["secondGem"] = false },
     [16] = { ["name"] = "MainHand",      ["side"] = "RIGHT",         ["enchantment"] = true,   ["secondGem"] = false },
     [17] = { ["name"] = "SecondaryHand", ["side"] = "LEFT",          ["enchantment"] = true,   ["secondGem"] = false },
     [19] = { ["name"] = "Tabard",        ["side"] = "LEFT",          ["enchantment"] = false,  ["secondGem"] = false }
